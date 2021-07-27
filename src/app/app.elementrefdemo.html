@@ -1,0 +1,10 @@
+<mat-card-content>
+  <mat-card-title>Dangerous ElementRef Usage</mat-card-title>
+  <p>Hello <b name></b>!</p>
+  <p> This demo will present you with a custom greeting and demonstrate the danger with inserting untrusted data directly into the DOM via Angular's ElementRef class. The user's name may be passed to the application via the 'name' attribute in the query string (e.g. /ElementRef?name=Bob).</p>
+  <mat-button-toggle onclick="document.getElementById('tip').hidden=false">Tip</mat-button-toggle> 
+  <p id="tip" hidden=true>Angular's ElementRef class allows developers to manipulate the DOM directly. This class should never be used to set untrusted input in dangerous HTML elements/attributes (e.g. innerHTML). In this demonstration the ElementRef class is used to set the innerHTML attribute of an element to the untrusted 'name' parameter from the query string. An attacker can exploit this direct DOM manipulation with the payload <b class="red"> /?name=&#x3C;img src=x onerror=alert(&#x22;XSS_SUCCESS!&#x22;)&#x3E;.<br><br></b>Click <a href="/ElementRef?name=<img src=x onerror=alert('XSS_SUCCESS!')>">here</a> for an example.
+  <br>
+  <br>Click <a href="https://angular.io/api/core/ElementRef">here</a> for additional documentation.
+  </p>
+</mat-card-content>

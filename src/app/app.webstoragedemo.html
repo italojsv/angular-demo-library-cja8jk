@@ -1,0 +1,7 @@
+<mat-card-content>
+  <mat-card-title>WebStorage Info Leakage</mat-card-title>
+  <p>
+    This demo stores sensitive user data in the client-side LocalStorage data store. This data will persist indefinitely unless explicitly cleared. It may be leaked to an attacker with physical access to the user's system, via malware running on the user's system, or via a cross-site scripting attack.
+  </p>
+  <mat-button-toggle onclick="document.getElementById('tip').hidden=false">Tip</mat-button-toggle> 
+  <p id="tip" hidden=true>We can access the browser's web storage by running the command <b class='red'>localStorage.getItem('UserData') </b> in the browser's JavaScript console. We can also access this data using Web Inspector, FireBug, or various other browser plugins. Alternatively, WebStorage data may also be accessed by directly querying the file or Sqlite database used by the browser to store WebStorage data; however, the location of this file/database will be system/browser dependent.</p>

@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script>
+    </script>
+    <base href="/">
+    <title>Angular Demo Library</title>
+  </head>
+  <body class="mat-card">
+    <div class="topnav">
+      <a [routerLink] = "['/Home']" >Home</a>
+      <a [routerLink] = "['/Sanitizer']" >Sanitizer</a>
+      <a [routerLink] = "['/ElementRef']">ElementRef</a>
+      <a [routerLink] = "['/WebStorage']">WebStorage</a>
+      <a [routerLink] = "['/AuthZDemo']">Client-Side AuthZ</a>
+    </div>
+    <router-outlet></router-outlet>
+  </body>
+</html>

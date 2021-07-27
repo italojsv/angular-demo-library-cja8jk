@@ -1,0 +1,35 @@
+<mat-card-content>
+  <mat-card-title>Administrative Interface</mat-card-title>
+  <p>Welcome to the administrative interface!
+  <br>
+  <h3>Application Users:</h3>
+  <ul>
+	  <li>Bob1</li>
+	  <li>Alice_123</li>
+	  <li>Administrator</li>
+	  <li>Guest</li>
+	  <li>Eve001</li>
+  </ul>
+  <mat-button-toggle>Add User</mat-button-toggle>
+  <mat-button-toggle>Update User</mat-button-toggle>
+  <mat-button-toggle>Delete User</mat-button-toggle>
+  <br>
+  <br>
+  Run Command: <input type="text" size="30">
+  <br>
+  <br>
+  Fix Security Issues: <mat-radio-button></mat-radio-button>
+</mat-card-content>
+	<script>
+		function addUser(username, role, credentials){
+			params = {"username": username, "role": role, "credentials": credentials}
+			xhttp = new XMLHttpRequest();
+			xhttp.open('POST', '/admin/addUser', true);
+			xhttp.setRequestHeader("Authorization", "8x556aDcf46ersV7BUAvxKduJn8vpVLkXQvfAn9b");
+			xhttp.setRequestHeader("Content-type", "application/json");
+			xhttp.send(JSON.stringify(params));
+		}
+	</script>
+
+
+
